@@ -52,16 +52,16 @@ const Step4Container = () => {
 
   return (
     <div className="flex flex-col justify-center items-center gap-10 font-mako">
-      <h1 className="text-3xl">Step 4: Fill in extra details</h1>
-      <div className="container p-5 bg-[#D3D2D2] flex flex-col gap-4">
+      <h1 className="text-3xl  dark:text-white">Step 4: Fill in extra details</h1>
+      <div className="container p-5 bg-[#D3D2D2] dark:bg-white flex flex-col gap-4">
         <p className="text-[#FFA500]">Select All your Details________</p>
         <p className="font-mako text-2xl">Extra-Details</p>
-        <div className="bg-[#BCBCBC] flex flex-row items-center justify-between rounded-md px-7 py-3">
+        <div className="bg-[#BCBCBC]  dark:bg-[#F0F8FF]  flex flex-row items-center justify-between rounded-md px-7 py-3">
           <span>With Goods</span>
           <input
             type="number"
             placeholder="Quantity"
-            className="bg-[#BCBCBC] focus:outline-none placeholder:text-black hover:cursor-pointer"
+            className="bg-[#BCBCBC] dark:bg-[#F0F8FF] focus:outline-none placeholder:text-black hover:cursor-pointer"
             name="quantity"
             value={withGoodsQuantity}
             onChange={handleWithGoodsQuantityChange}
@@ -73,12 +73,12 @@ const Step4Container = () => {
           Select Now
         </button>
         </div>
-        <div className="bg-[#BCBCBC] flex flex-row items-center justify-between rounded-md px-7 py-3">
+        <div className="bg-[#BCBCBC] dark:bg-[#F0F8FF] flex flex-row items-center justify-between rounded-md px-7 py-3">
           <span>With Sick Person</span>
           <input
             type="number"
             placeholder="How many"
-            className="bg-[#BCBCBC] focus:outline-none placeholder:text-black hover:cursor-pointer"
+            className="bg-[#BCBCBC] dark:bg-[#F0F8FF] focus:outline-none placeholder:text-black hover:cursor-pointer"
             name="quantity"
             value={withSickPersonCount}
             onChange={handleWithSickPersonCountChange}
@@ -90,7 +90,7 @@ const Step4Container = () => {
           Select Now
         </button>
         </div>
-        <div className="bg-[#BCBCBC] flex flex-row items-center justify-between rounded-md px-7 py-3">
+        <div className="bg-[#BCBCBC] dark:bg-[#F0F8FF] flex flex-row items-center justify-between rounded-md px-7 py-3">
           <span>With Old Person</span>
           <div className="flex flex-row gap-6">
             <input
@@ -119,7 +119,7 @@ const Step4Container = () => {
           Select Now
         </button>
         </div>
-        <div className="bg-[#BCBCBC] flex flex-row items-center justify-between rounded-md px-7 py-3">
+        <div className="bg-[#BCBCBC] dark:bg-[#F0F8FF] flex flex-row items-center justify-between rounded-md px-7 py-3">
           <span>With Any disability</span>
           <div className="flex flex-row gap-6">
             <input
@@ -148,7 +148,7 @@ const Step4Container = () => {
           Select Now
         </button>
         </div>
-        <div className="bg-[#BCBCBC] flex flex-row items-center justify-between rounded-md px-7 py-3">
+        <div className="bg-[#BCBCBC] dark:bg-[#F0F8FF] flex flex-row items-center justify-between rounded-md px-7 py-3">
           <span>With National Identity Card</span>
           <div className="flex flex-row gap-6">
             <input

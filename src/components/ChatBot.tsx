@@ -1,7 +1,9 @@
 import { useState } from "react";
+import { useTheme } from "../hooks/ThemeContezt";
 
 const ChatBot = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const darkMode=useTheme()
 
   const handleChatBot = () => {
     setIsOpen((prev: boolean) => !prev);
@@ -21,8 +23,8 @@ const ChatBot = () => {
               <p className="text-white ml-[-50px] text-2xl">CoRyde</p>
             </header>
 
-            <main className="overflow-scroll">
-              <div className="flex flex-row justify-start items-center bg-[#808080] ml-4 w-8/12 welcomeDiv mt-5">
+            <main className="overflow-scroll dark:bg-[#121E3E]">
+              <div className="flex flex-row justify-start items-center bg-[#808080] dark:bg-[#030D27] dark:text-white ml-4 w-8/12 welcomeDiv mt-5">
                 <img
                   src="/assets/coryde.png"
                   alt=""
@@ -62,12 +64,12 @@ const ChatBot = () => {
 
       <div
         onClick={handleChatBot}
-        className="bg-[#808080] rounded-2xl hover:cursor-pointer w-14 h-14 flex justify-center items-center absolute left-[550px]  bottom-[310px]"
+        className={`bg-[#808080] dark:bg-white rounded-2xl hover:cursor-pointer w-14 h-14 flex justify-center items-center absolute left-[550px]  ${isOpen ?"":"bottom-[210px]"} `}
       >
         {isOpen ? (
-          <img src="/assets/chatBotOpen.png" className="w-8 h-8" />
+          <img src={`${darkMode ?"/assets/chatBotOpenDark.png":"/assets/chatBotOpen.png"}`} className="w-8 h-8" />
         ) : (
-          <img src="/assets/chatbot.png" className="w-8 h-8" />
+          <img src={`${darkMode?"/assets/chatbotDark.png":"/assets/chatbot.png"}`} className="w-8 h-8" />
         )}
       </div>
     </div>

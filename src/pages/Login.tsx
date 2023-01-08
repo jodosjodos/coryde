@@ -3,6 +3,8 @@ import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
+import { handleGoogleSubmition } from "../hooks/handleGoogleSubmittion";
+import { useTheme } from "../hooks/ThemeContezt";
 
 interface DataTypes {
   email: string;
@@ -38,16 +40,19 @@ const Login = () => {
     console.log(data);
   };
 
+
+  const {darkMode} =useTheme()
+
   return (
     <div>
-      <div className="flex flex-col justify-center items-center gap-24">
-        <h1 className="text-4xl">Log into my account</h1>
-        <button className=" border border-black flex flex-row gap-32  justify-evenly items-center p-2">
-          <p className="text-[#ccc] font-extrabold">
+      <div className="flex flex-col justify-center items-center gap-24 dark:bg-[#030D27] pb-[5.05em] text-[#808080]">
+        <h1 className="text-4xl dark:text-white">Log into my account</h1>
+        <button className=" border border-black dark:border-white  flex flex-row gap-32  justify-evenly items-center p-2" onClick={handleGoogleSubmition}>
+          <p className="text-[#ccc] font-extrabold dark:text-[#808080]">
             continue with your google account
           </p>
           <img
-            src="/assets/google.png"
+            src={`${darkMode ? "assets/googleDark.png":"assets/google.png"}`}
             alt="google icon"
             className="w-10 h-10"
           />
@@ -66,7 +71,7 @@ const Login = () => {
             <input
               type="text"
               placeholder="Email"
-              className={`w-12/12 bg-[#D3D2D2] border-2  h-16  px-5 w-[600px] placeholder:text-black border-black focus:outline-none ${
+              className={`w-12/12 bg-[#D3D2D2] dark:bg-[#041134] border-2  h-16  px-5 w-[600px] placeholder:text-black placeholder:dark:text-[#808080] border-black dark:border-white focus:outline-none ${
                 errors?.email ? " border-red-400 placeholder:text-red-400" : ""
               }`}
               id="email"
@@ -76,29 +81,29 @@ const Login = () => {
             <input
               type="password"
               placeholder="password"
-              className={`w-12/12 bg-[#D3D2D2] border-2 h-16 px-5 w-[600px] placeholder:text-black border-black focus:outline-none ${
+              className={`w-12/12 bg-[#D3D2D2] dark:bg-[#041134] border-2  h-16  px-5 w-[600px] placeholder:text-black placeholder:dark:text-[#808080] border-black dark:border-white focus:outline-none  ${
                 errors?.email ? "border-red-400 placeholder:text-red-400" : ""
               }`}
               id="password"
               {...register("password")}
               onChange={handleChanges}
             />
-            <button className="bg-[#CC732B] h-16 text-xl text-white mb-5">
+            <button className="bg-[#CC732B] h-16 text-xl text-white mb-5 font-extrabold">
               Login
             </button>
           </form>
           <div>
             <p className="flex flex-row justify-between items-center gap-5">
-              <p>
+             
                 <span className="text-[#808080]">Don't have an account ?</span>{" "}
                 <Link
                   to="/signUp"
-                  className=" hover:border-b-4 hover:border-[#EC9D0C] hover:text-xl hover:cursor-pointer"
+                  className=" hover:border-b-4 hover:border-[#EC9D0C] hover:text-xl hover:cursor-pointer dark:text-white font-extrabold"
                 >
                   Signup
                 </Link>
-              </p>{" "}
-              <span className="hover:border-b-4 hover:border-[#EC9D0C] hover:text-lg hover:cursor-pointer">
+             
+              <span className="hover:border-b-4 hover:border-[#EC9D0C] hover:text-lg hover:cursor-pointer dark:text-white font-extrabold">
                 Forgot Password ?
               </span>{" "}
             </p>

@@ -16,7 +16,7 @@ const Home = () => {
   }
 
   return (
-    <div className="flex flex-col gap-10">
+    <div className="flex flex-col gap-10  dark:bg-[#030D27] ">
       <div id="homeCard">
         <HomeMainCard />
       </div>

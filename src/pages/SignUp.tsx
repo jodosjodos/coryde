@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
+import { handleGoogleSubmition } from "../hooks/handleGoogleSubmittion";
+import { useTheme } from "../hooks/ThemeContezt";
 
 const Schema = yup.object().shape({
   firstName: yup
@@ -42,25 +44,35 @@ const SignUp = () => {
     clearErrors("lastName");
     clearErrors("password");
   };
+
+  const { darkMode } = useTheme();
+
   return (
     <div>
-      <div className="flex flex-col justify-center items-center gap-10 pb-10">
-        <h1 className="text-4xl">Ryde your dream with CoRdye</h1>
-        <button className=" border border-black flex flex-row gap-32  justify-evenly items-center p-2">
-          <p  className="text-[#ccc] font-extrabold">Continue with  your google account</p>
+      <div className="flex flex-col justify-center items-center gap-10 pb-10 dark:bg-[#030D27] dark:text-[#C0BCBC]">
+        <h1 className="text-4xl dark:text-[#C0BCBC]">
+          Ryde your dream with CoRdye
+        </h1>
+        <button
+          className=" border border-black dark:border-white  flex flex-row gap-32  justify-evenly items-center p-2"
+          onClick={handleGoogleSubmition}
+        >
+          <p className="text-[#ccc] font-extrabold dark:text-[#808080]">
+            Continue with your google account
+          </p>
 
           <img
-            src="/assets/google.png"
+            src={`${darkMode ? "assets/googleDark.png" : "assets/google.png"}`}
             alt="google icon"
             className="w-10 h-10"
           />
         </button>
         <div className="font-bold text-[#CC732B] flex  justify-start flex-col mb-2">
-            {errors?.firstName && <p>{errors?.firstName?.message}</p>}
-            {errors?.lastName && <p>{errors?.lastName?.message}</p>}
-            {errors?.email && <p>{errors?.email?.message}</p>}
-            {errors?.password && <p>{errors?.password?.message}</p>}
-          </div>
+          {errors?.firstName && <p>{errors?.firstName?.message}</p>}
+          {errors?.lastName && <p>{errors?.lastName?.message}</p>}
+          {errors?.email && <p>{errors?.email?.message}</p>}
+          {errors?.password && <p>{errors?.password?.message}</p>}
+        </div>
         <div>
           <form
             className="flex flex-col gap-5"
@@ -70,7 +82,11 @@ const SignUp = () => {
               <input
                 type="text"
                 placeholder="Fist name"
-                className={`${errors?.firstName?" border-red-400 placeholder:text-red-400":""} w-6/12 bg-[#D3D2D2] border-2  h-16  px-5 placeholder:text-black border-black focus:outline-none`}
+                className={`${
+                  errors?.firstName
+                    ? " border-red-400 placeholder:text-red-400"
+                    : ""
+                } w-6/12 bg-[#D3D2D2] border-2  h-16  px-5 placeholder:text-black placeholder:dark:text-[#808080] dark:bg-[#041134] dark:border-white  border-black focus:outline-none`}
                 {...register("firstName")}
                 id="firstName"
                 onChange={handleOnChange}
@@ -78,7 +94,11 @@ const SignUp = () => {
               <input
                 type="text"
                 placeholder="Last name"
-                className={`${errors?.lastName?" border-red-400 placeholder:text-red-400":""} w-6/12 bg-[#D3D2D2] border-2  h-16  px-5  placeholder:text-black border-black focus:outline-none`}
+                className={`${
+                  errors?.lastName
+                    ? " border-red-400 placeholder:text-red-400"
+                    : ""
+                } w-6/12 bg-[#D3D2D2] border-2  h-16  px-5  placeholder:text-black border-black focus:outline-none placeholder:dark:text-[#808080] dark:bg-[#041134] dark:border-white `}
                 {...register("lastName")}
                 id="lastName"
               />
@@ -86,7 +106,9 @@ const SignUp = () => {
             <input
               type="text"
               placeholder="Email"
-              className={` ${errors?.email?" border-red-400 placeholder:text-red-400":""} w-12/12 bg-[#D3D2D2] border-2  h-16  px-5 w-[600px] placeholder:text-black border-black focus:outline-none`}
+              className={` ${
+                errors?.email ? " border-red-400 placeholder:text-red-400" : ""
+              } w-12/12 bg-[#D3D2D2] border-2  h-16  px-5 w-[600px] placeholder:text-black border-black focus:outline-none placeholder:dark:text-[#808080] dark:bg-[#041134] dark:border-white `}
               {...register("email")}
               id="email"
               onChange={handleOnChange}
@@ -94,12 +116,16 @@ const SignUp = () => {
             <input
               type="password"
               placeholder="password"
-              className={` ${errors?.password?" border-red-400 placeholder:text-red-400":""} w-12/12 bg-[#D3D2D2] border-2  h-16  px-5 w-[600px] placeholder:text-black border-black focus:outline-none`}
+              className={` ${
+                errors?.password
+                  ? " border-red-400 placeholder:text-red-400"
+                  : ""
+              } w-12/12 bg-[#D3D2D2] border-2  h-16  px-5 w-[600px] placeholder:text-black border-black focus:outline-none placeholder:dark:text-[#808080] dark:bg-[#041134] dark:border-white `}
               {...register("password")}
               id="password"
               onChange={handleOnChange}
             />
-            <div className="flex flex-row  gap-38 my-3">
+            <div className="flex flex-row  gap-38 my-3 dark:text-[#808080]">
               <ul className="flex flex-col gap-2 w-6/12 list-disc list-inside">
                 <li>A minimum of 10 characters</li>
                 <li>At least one Lowercase letter</li>
@@ -117,12 +143,12 @@ const SignUp = () => {
             <p className="text-[#808080]">
               Signing up for a CoRyde account means you agree to the
             </p>
-            <p className="text-[#808080] mb-5 underline hover:cursor-pointer">
+            <Link to="/services" className="text-[#808080] mb-5 underline hover:cursor-pointer">
               {" "}
               Privacy Policy and Terms of Service.
-            </p>
+            </Link>
             <p className="flex gap-2">
-              <span className="text-[#808080]">Have an account?</span>{" "}
+              <span className="text-[#808080] dark:text-white">Have an account?</span>{" "}
               <Link
                 to="/login"
                 className=" hover:border-b-4 hover:border-[#EC9D0C] hover:text-xl hover:cursor-pointer"
