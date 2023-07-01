@@ -28,7 +28,7 @@ const Navbar = () => {
       </div>
       <div className="flex flex-row justify-space items-center gap-24 ">
         <div className="flex flex-row items-center justify-around gap-10">
-          {location.pathname === "/login" ? (
+          {location.pathname === "/login" || location.pathname==="/signUp"   || location.pathname==="/home" ? (
             <></>
           ) : (
             <>
@@ -69,7 +69,7 @@ const Navbar = () => {
         </div>
 
         <div className="flex flex-row items-center  gap-5   ">
-          {location.pathname === "/login" ? (
+          {location.pathname === "/login"  || location.pathname==="/signUp"  || location.pathname==="/home" ? (
             <></>
           ) : (
             <>
