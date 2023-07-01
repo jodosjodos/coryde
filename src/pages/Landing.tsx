@@ -1,9 +1,9 @@
-
+import ChatBot from "../components/ChatBot";
 
 const Landing = () => {
   return (
     <div>
-      <main>
+      <main className="relative">
         <div className="relative">
           <div className="flex justify-content  px-3">
             <img
@@ -156,6 +156,11 @@ const Landing = () => {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+        <div className="absolute left-[50vw] bottom-0 w-full min-h-fit  ">
+          <div >
+            <ChatBot />
           </div>
         </div>
       </main>

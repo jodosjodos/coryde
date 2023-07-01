@@ -7,3 +7,12 @@
     padding: 0;
     box-sizing: border-box;
 }
+.welcomeDiv{
+    border-radius: 15px 15px 70px 15px;
+}
+.welcomeDiv2{
+    border-radius:70px 15px 15px 15px;
+}
+.welcomeDiv3{
+    border-radius: 0px 0px 0px 70px;
+}
