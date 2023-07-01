@@ -6,7 +6,7 @@ const Login = () => {
   
   return (
     <div>
-      <div className="flex flex-col justify-center items-center gap-10">
+      <div className="flex flex-col justify-center items-center gap-24">
         <h1  className="text-4xl">Log into  my account</h1>
          <button className=" border border-black flex flex-row gap-32  justify-evenly items-center p-2"> 
           <img src="/assets/badext.png" alt="user" />
@@ -18,7 +18,7 @@ const Login = () => {
          </button>
 
          <div>
-          <form  className="flex flex-col gap-5">
+          <form  className="flex flex-col gap-16">
             <input type="text" placeholder="Email or Username" className="w-12/12 bg-[#D3D2D2] border-2  h-16  px-5 w-[600px] placeholder:text-black border-black focus:outline-none" name="email" id="email" />
             <input type="password" placeholder="password" className="w-12/12 bg-[#D3D2D2] border-2  h-16  px-5 w-[600px] placeholder:text-black border-black focus:outline-none" name="password" id="password" />
             <button className="bg-[#CC732B] h-16 text-xl text-white mb-5">Login</button>

@@ -4,6 +4,7 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   const location = useLocation();
+  const pathname = location.pathname;
 
   const handleLogoClick = () => {
     navigate("/");
@@ -32,25 +33,33 @@ const Navbar = () => {
           ) : (
             <>
               <Link
-                className="hover:border-b-4 hover:cursor-pointer text-2xl   hover:border-[#FFA500] "
+                className={` ${
+                  pathname === "/home" ? "border-b-4 border-[#FFA500]" : ""
+                } hover:cursor-pointer   text-2xl     `}
                 to="/home"
               >
                 Home
               </Link>
               <Link
-                className="hover:border-b-4 hover:cursor-pointer   text-2xl    hover:border-[#FFA500]"
+                className={` ${
+                  pathname === "/about" ? "border-b-4 border-[#FFA500]" : ""
+                } hover:cursor-pointer   text-2xl     `}
                 to="/about"
               >
                 About
               </Link>
               <Link
-                className="hover:border-b-4 hover:cursor-pointer   text-2xl     hover:border-[#FFA500]"
+                className={` ${
+                  pathname === "/login" ? "border-b-4 border-[#FFA500]" : ""
+                } hover:cursor-pointer   text-2xl     `}
                 to="/login"
               >
                 Book
               </Link>
               <Link
-                className="hover:border-b-4 hover:cursor-pointer    text-2xl  hover:border-[#FFA500]"
+                className={` ${
+                  pathname === "/services" ? "border-b-4 border-[#FFA500]" : ""
+                } hover:cursor-pointer   text-2xl     `}
                 to="/services"
               >
                 Services
@@ -60,15 +69,20 @@ const Navbar = () => {
         </div>
 
         <div className="flex flex-row items-center  gap-5   ">
-          {
-            location.pathname==="/login" ? <></>:<>   <Link
-            to="/login"
-            className="text-white bg-[#EC9D0C] px-4 py-2 rounded-lg"
-          >
-            Login
-          </Link></>
-          }
-       
+          {location.pathname === "/login" ? (
+            <></>
+          ) : (
+            <>
+              {" "}
+              <Link
+                to="/login"
+                className="text-white bg-[#EC9D0C] px-4 py-2 rounded-lg"
+              >
+                Login
+              </Link>
+            </>
+          )}
+
           <img
             src="/assets/ThemeLogo.png"
             alt="theme toggle"

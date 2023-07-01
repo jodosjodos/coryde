@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const SignUp = () => {
   return (
     <div>
-      <div className="flex flex-col justify-center items-center gap-10">
+      <div className="flex flex-col justify-center items-center gap-10 pb-10">
         <h1 className="text-4xl">Ryde your dream with CoRdye</h1>
         <button className=" border border-black flex flex-row gap-32  justify-evenly items-center p-2">
           <img src="/assets/badext.png" alt="user" />

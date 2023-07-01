@@ -21,8 +21,8 @@ const Services = () => {
         </p>
         <p>Choose us also for:</p>
       </div>
-      <div className="flex flex-row items-center  gap-24 ">
-        <div className="ml-40 md:ml-10">
+      <div className="flex flex-row items-center s justify-evenly">
+        <div className="ml-40 md:ml-10 w-6/10">
           <img
             src="/assets/car.png"
             alt="car image"
