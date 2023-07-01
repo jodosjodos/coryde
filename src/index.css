@@ -16,3 +16,7 @@
 .welcomeDiv3{
     border-radius: 0px 0px 0px 70px;
 }
+.serviceBackground{
+    background: linear-gradient(180deg, #EC9D0C 0%, rgba(236, 157, 12, 0.190883) 99.47%, #EC9D0C 99.48%, rgba(236, 157, 12, 0) 100%, rgba(236, 157, 12, 0.337268) 100%);
+
+}
