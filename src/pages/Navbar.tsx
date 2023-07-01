@@ -9,17 +9,17 @@ const Navbar = () => {
     navigate("/");
   };
   return (
-    <div className="flex flex-row  justify-around   lg:gap-[60em]">
+    <div className="flex flex-row  justify-around   lg:gap-[60em] mt-5  ">
       <div className="flex flex-row items-center gap-3">
         <div className="" onClick={handleLogoClick}>
           <img
             src="/assets/coryde.png"
             alt=""
-            className="w-[150px] h-[100px]  object-contain hover:cursor-pointer active:cursor-pointer"
+            className="w-[200px] h-[200px]  object-contain hover:cursor-pointer active:cursor-pointer"
           />
         </div>
         <p
-          className="text-[#CC732B] text-2xl font-extrabold ml-[-90px] cursor-pointer"
+          className="text-[#CC732B] text-4xl font-extrabold ml-[-100px] cursor-pointer"
           onClick={handleLogoClick}
         >
           CoRyde
@@ -32,25 +32,25 @@ const Navbar = () => {
           ) : (
             <>
               <Link
-                className="hover:border-b-4 hover:cursor-pointer    hover:border-[#FFA500] "
+                className="hover:border-b-4 hover:cursor-pointer text-2xl   hover:border-[#FFA500] "
                 to="/home"
               >
                 Home
               </Link>
               <Link
-                className="hover:border-b-4 hover:cursor-pointer    hover:border-[#FFA500]"
+                className="hover:border-b-4 hover:cursor-pointer   text-2xl    hover:border-[#FFA500]"
                 to="/about"
               >
                 About
               </Link>
               <Link
-                className="hover:border-b-4 hover:cursor-pointer    hover:border-[#FFA500]"
+                className="hover:border-b-4 hover:cursor-pointer   text-2xl     hover:border-[#FFA500]"
                 to="/login"
               >
                 Book
               </Link>
               <Link
-                className="hover:border-b-4 hover:cursor-pointer    hover:border-[#FFA500]"
+                className="hover:border-b-4 hover:cursor-pointer    text-2xl  hover:border-[#FFA500]"
                 to="/services"
               >
                 Services

@@ -62,7 +62,7 @@ const ChatBot = () => {
 
       <div
         onClick={handleChatBot}
-        className="bg-[#808080] rounded-2xl hover:cursor-pointer w-14 h-14 flex justify-center items-center absolute left-[550px]  z-0"
+        className="bg-[#808080] rounded-2xl hover:cursor-pointer w-14 h-14 flex justify-center items-center absolute left-[550px]  bottom-[310px]"
       >
         {isOpen ? (
           <img src="/assets/chatBotOpen.png" className="w-8 h-8" />

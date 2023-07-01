@@ -10,7 +10,7 @@ const Address = () => {
           <p>www.coryde.rw</p>
           <p>+2507887234734</p>
         </div>
-        <div className="col-start-3 row-start-3 col-span-1  flex  flex-col  items-center gap-2">
+        <div className=" flex  flex-col  items-center gap-2">
           <h4 className="text-xl hover:border-b-4 hover:cursor-pointer    hover:border-[#FFA500]">
             Location
           </h4>
@@ -18,7 +18,7 @@ const Address = () => {
           <p>St building Room 34</p>
           <p>KN39DSY</p>
         </div>
-        <div className="col-start-5 row-start-3 col-span-1  flex  flex-col  items-center gap-2">
+        <div className=" flex  flex-col  items-center gap-2">
           <h4 className="text-xl hover:border-b-4 hover:cursor-pointer    hover:border-[#FFA500]">
             Language
           </h4>
@@ -49,7 +49,7 @@ const Address = () => {
           </div>
         </div>
       </div>
-      <footer className="flex justify-center items-center  border-t-4 border-black py-7 pb-5 mt-5">
+      <footer className="flex justify-center items-center  border-t-4 border-black py-7 pb-9 mt-10">
         <div className="flex flex-row gap-2">
           <div className="w-6 h-6 rounded-full border border-black flex  justify-center items-center font-bold">
             <p>c</p>
