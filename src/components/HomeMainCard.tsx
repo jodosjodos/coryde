@@ -7,6 +7,11 @@ const HomeMainCard = () => {
     (state: RootState) => state.formSubmission.submitted
   );
 
+
+
+  const handleScroll=()=>{
+    window.scroll(0,1800)
+  }
   return (
     <div className={`relative ${formSubmitted ?" z-0 opacity-90":""} overflow-x-hidden`}>
       {formSubmitted ? (
@@ -43,11 +48,11 @@ const HomeMainCard = () => {
         </h1>
 
         <div className="flex flex-row gap-16">
-          <div className="bg-[#FFA500] flex flex-row w-9/12  justify-between p-3">
+          <div className="bg-[#FFA500] flex flex-row w-9/12  justify-between p-3 hover:cursor-pointer" onClick={handleScroll}>
             <p className="text-white text-3xl">Get Started</p>
             <img src="/assets/arrow.png" alt="arrow " className="w-10 h-10" />
           </div>
-          <div className="bg-[#FFA500] flex flex-row w-9/12  justify-between p-3">
+          <div className="bg-[#FFA500] flex flex-row w-9/12  justify-between p-3 hover:cursor-pointer" onClick={handleScroll}>
             <p className="text-white text-3xl">View New Orders</p>
             <img src="/assets/arrow.png" alt="arrow " className="w-10 h-10" />
           </div>

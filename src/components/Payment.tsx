@@ -35,13 +35,13 @@ const Payment = () => {
           
       }
   return (
-  <div>
+  <div className="flex flex-col gap-10">
     <h1 className="text-3xl">Card information</h1>
       <div className="mb-3">
-        <p className="text-[#FFA500]">
+        <p className="text-[#FFA500] text-xl">
           Indicate details of the card from which
         </p>
-        <p className="text-[#FFA500]">money will be debited</p>
+        <p className="text-[#FFA500] text-xl">money will be debited</p>
       </div>
       <div className="bg-[#D3D2D2]  p-10 ">
         <form onSubmit={handleSubmit(handleSubmission)} className="flex flex-col gap-7 justify-start">

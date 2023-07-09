@@ -4,12 +4,23 @@ import Step2Container from "../components/Home/Step2Container";
 import Step3Container from "../components/Home/Step3Container";
 import Step4Container from "../components/Home/Step4Container";
 import Step5container from "../components/Home/Step5container";
+import { useSelector } from "react-redux";
+import { RootState } from "../store";
+import { useRef } from "react";
 
 
 const Home = () => {
+  const formSubmitted = useSelector(
+    (state: RootState) => state.formSubmission.submitted
+  );
+ if(formSubmitted){
+  window.scroll(0,750)
+ }
+ 
+
   return (
     <div className="flex flex-col gap-10">
-      <div>
+      <div id="homeCard">
         <HomeMainCard />
       </div>
       <div>
