@@ -2,25 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-.welcomeDiv{
+
+.welcomeDiv {
     border-radius: 15px 15px 70px 15px;
 }
-.welcomeDiv2{
-    border-radius:70px 15px 15px 15px;
+
+.welcomeDiv2 {
+    border-radius: 70px 15px 15px 15px;
 }
-.welcomeDiv3{
+
+.welcomeDiv3 {
     border-radius: 0px 0px 0px 70px;
 }
-.serviceBackground{
+
+.serviceBackground {
     background: linear-gradient(180deg, #EC9D0C 0%, rgba(236, 157, 12, 0.190883) 99.47%, #EC9D0C 99.48%, rgba(236, 157, 12, 0) 100%, rgba(236, 157, 12, 0.337268) 100%);
 
 }
-.listStyles{
-    list-style : image("/assets/listStyle1.png");
+
+.listStyles {
+    list-style: image("/assets/listStyle1.png");
     /* list-style-type; */
+}
+
+.datePicker{
+    background-color: orange;
+}
+.datePicker input{
+  
 }

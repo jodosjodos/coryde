@@ -1,30 +1,45 @@
 import { ChangeEvent, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "../../store";
+import { ExtraDetailsActions } from "../../store/reducers/ExtraDetailsSlice";
 
 const Step4Container = () => {
-  const [withGoodsQuantity, setWithGoodsQuantity] = useState("");
-  const [withSickPersonCount, setWithSickPersonCount] = useState("");
-  const [withOldPerson, setWithOldPerson] = useState("");
-  const [withAnyDisability, setWithAnyDisability] = useState("");
-  const [withNIC, setWithNIC] = useState("");
+  const dispatch=useDispatch()
+  const initialValues=useSelector((state:RootState)=>state.extraDetails)
+  // console.log(initialValues);
+  
+  
+  const [withGoodsQuantity, setWithGoodsQuantity] = useState(initialValues.goods);
+  const [withSickPersonCount, setWithSickPersonCount] = useState(initialValues.sickPeople);
+  const [withOldPerson, setWithOldPerson] = useState(initialValues.oldPeople);
+  const [withAnyDisability, setWithAnyDisability] = useState(initialValues.disability);
+  const [withNIC, setWithNIC] = useState(initialValues.NIC);
 
   const handleWithGoodsQuantityChange = (event:ChangeEvent<HTMLInputElement>) => {
-    setWithGoodsQuantity(event.target.value);
+    setWithGoodsQuantity(Number(event.target.value));
+   dispatch(ExtraDetailsActions.changeDetails({...initialValues,goods:event.target.value}))
+    
+    
   };
 
   const handleWithSickPersonCountChange = (event :ChangeEvent<HTMLInputElement>) => {
-    setWithSickPersonCount(event.target.value);
+    setWithSickPersonCount( Number(event.target.value));
+    dispatch(ExtraDetailsActions.changeDetails({...initialValues,sickPeople:event.target.value}))
   };
 
   const handleWithOldPersonChange = (event :ChangeEvent<HTMLInputElement>) => {
     setWithOldPerson(event.target.value);
+    dispatch(ExtraDetailsActions.changeDetails({...initialValues,oldPeople:event.target.value}))
   };
 
   const handleWithAnyDisabilityChange = (event :ChangeEvent<HTMLInputElement>) => {
     setWithAnyDisability(event.target.value);
+    dispatch(ExtraDetailsActions.changeDetails({...initialValues,disability:event.target.value}))
   };
 
   const handleWithNICChange = (event :ChangeEvent<HTMLInputElement>) => {
     setWithNIC(event.target.value);
+    dispatch(ExtraDetailsActions.changeDetails({...initialValues,NIC:event.target.value}))
   };
 
   const handleSelectNow = () => {
