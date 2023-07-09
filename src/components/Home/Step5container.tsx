@@ -1,6 +1,13 @@
+import { useSelector } from "react-redux";
+
+import { combinedSelector } from "../../hooks/allData";
+import { convertTime } from "../../hooks/formatDate";
+
 const Step5container = () => {
+  const data = useSelector(combinedSelector);
+
   return (
-    <div className="flex flex-col justify-center items-center gap-10  font-mako mb-16">
+    <div className="flex flex-col justify-center items-center gap-10  font-mako mb-16 text-xl">
       <h1 className="text-3xl">Step 5: Fill Car & Personal Details</h1>
       <div className=" container p-5 bg-[#D3D2D2] flex flex-col gap-4">
         <p className="text-[#FFA500]">Enter Your Details __________</p>
@@ -9,7 +16,7 @@ const Step5container = () => {
           <div className="bg-white flex flex-row gap-20 items-center justify-center w-full h-32 py-7 px-16 hover:cursor-pointer">
             <div className="flex flex-col gap-1">
               <p>Vehicle Type</p>
-              <p className="text-[#FFA500]">Microbus</p>
+              <p className="text-[#FFA500]">{data.carType}</p>
             </div>
             <div>
               <img
@@ -22,7 +29,7 @@ const Step5container = () => {
           <div className="bg-white flex flex-row gap-20 items-center justify-center w-full h-32 py-7 px-16">
             <div className="flex flex-col gap-1">
               <p>Pricing Plan</p>
-              <p className="text-[#FFA500]">No Plan Selected</p>
+              <p className="text-[#FFA500]">{data.pricePlan}</p>
             </div>
             <div>
               <img
@@ -48,7 +55,7 @@ const Step5container = () => {
           <div className="bg-white flex flex-row gap-10 items-center justify-center w-full h-32 py-7 px-5">
             <div className="flex flex-col gap-1">
               <p>Booking Date</p>
-              <p className="text-[#FFA500]">No Date Selected</p>
+              <p className="text-[#FFA500]">{convertTime(data.date)}</p>
             </div>
             <div>
               <img
@@ -84,7 +91,7 @@ const Step5container = () => {
               />
             </div>
           </div>
-          <div className="w-full h-16 ">
+          <div className="w-full h-20 ">
             <input
               type="text"
               placeholder="First Name *"
@@ -92,7 +99,7 @@ const Step5container = () => {
               className=" w-full h-full bg-[#BCBCBC] border-none focus:outline-none  placeholder:text-xl  px-7  font-semibold"
             />
           </div>
-          <div className="w-full h-16 ">
+          <div className="w-full h-20 ">
             <input
               type="text"
               placeholder="Email *"
@@ -100,7 +107,7 @@ const Step5container = () => {
               className=" w-full h-full bg-[#BCBCBC] border-none focus:outline-none  placeholder:text-xl  px-7  font-semibold"
             />
           </div>
-          <div className="w-full h-16 ">
+          <div className="w-full h-20">
             <input
               type="text"
               placeholder="Phone Number"
@@ -108,7 +115,7 @@ const Step5container = () => {
               className=" w-full h-full bg-[#BCBCBC] border-none focus:outline-none  placeholder:text-xl  px-7  font-semibold"
             />
           </div>
-          <div className="w-full h-16 ">
+          <div className="w-full h-20 ">
             <input
               type="text"
               placeholder="National Identity Card 
@@ -117,7 +124,7 @@ Number *"
               className=" w-full h-full bg-[#BCBCBC] border-none focus:outline-none  placeholder:text-xl  px-7  font-semibold"
             />
           </div>
-          <div className="w-full h-16 ">
+          <div className="w-full h-20 ">
             <input
               type="text"
               placeholder="Current Destination"
@@ -125,7 +132,7 @@ Number *"
               className=" w-full h-full bg-[#BCBCBC] border-none focus:outline-none  placeholder:text-xl  px-7  font-semibold"
             />
           </div>
-          <div className="w-full h-16 ">
+          <div className="w-full h-20 ">
             <input
               type="text"
               placeholder="Final Destination"
@@ -133,7 +140,7 @@ Number *"
               className=" w-full h-full bg-[#BCBCBC] border-none focus:outline-none  placeholder:text-xl  px-7  font-semibold"
             />
           </div>
-          <div className=" col-start-1 col-span-3  h-16 ">
+          <div className=" col-start-1 col-span-3  h-20 ">
             {/* how to style that being entered */}
             <textarea
               name="extraDetails"
@@ -142,7 +149,9 @@ Number *"
               placeholder="extra Details "
             ></textarea>
           </div>
-        <button className="text-white bg-[#EC9D0C] px-7 py-2 rounded-sm  w-7/12  h-16">Confirm Booking</button>
+          <button className="text-white bg-[#EC9D0C] px-7 py-2 rounded-sm  w-7/12  h-16">
+            Confirm Booking
+          </button>
         </div>
       </div>
     </div>
