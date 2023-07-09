@@ -5,6 +5,7 @@ import Step3Container from "../components/Home/Step3Container";
 import Step4Container from "../components/Home/Step4Container";
 import Step5container from "../components/Home/Step5container";
 
+
 const Home = () => {
   return (
     <div className="flex flex-col gap-10">
@@ -26,6 +27,7 @@ const Home = () => {
       <div>
         <Step5container/>
       </div>
+    
     </div>
   );
 };
