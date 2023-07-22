@@ -1,16 +1,24 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useTheme } from "../hooks/ThemeContezt";
 
 const Navbar = () => {
+  const { darkMode, setDarkMode } = useTheme();
   const navigate = useNavigate();
 
   const location = useLocation();
   const pathname = location.pathname;
 
+
+   const toggleTheme = () => {
+    setDarkMode((prevDarkMode) => !prevDarkMode);
+  };
+
+
   const handleLogoClick = () => {
     navigate("/");
   };
   return (
-    <div className="flex flex-row  justify-around   lg:gap-[60em] mt-5  ">
+    <div className="flex flex-row  justify-around   lg:gap-[60em]  dark:text-white  dark:bg-[#030D27] ">
       <div className="flex flex-row items-center gap-3">
         <div className="" onClick={handleLogoClick}>
           <img
@@ -82,12 +90,14 @@ const Navbar = () => {
               </Link>
             </>
           )}
-
-          <img
-            src="/assets/ThemeLogo.png"
+         <div onClick={toggleTheme}>
+         <img
+            src={`${darkMode?"/assets/lightMode.png":"/assets/ThemeLogo.png"}`}
             alt="theme toggle"
-            className="objec-contain w-[15.75px] h-[20px] hover:cursor-pointer active:cursor-pointer"
+            className="objec-contain w-[15.75px] h-[20px] hover:cursor-pointer active:cursor-pointer toggleMode"
           />
+         </div>
+        
         </div>
       </div>
     </div>

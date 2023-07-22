@@ -2,7 +2,7 @@ const Team = () => {
   return (
     <div className="flex flex-col items-center justify-center mt-10 gap-10">
       <h1 className="text-4xl">Our Team</h1>
-      <div className="flex flex-row gap-24">
+      <div className="flex flex-row gap-24 dark:text-black">
         {/* team section */}
 
         {/* each memebr */}

@@ -20,12 +20,12 @@ const Step2Container = () => {
 
   return (
     <div className="flex flex-col justify-center items-center gap-10  font-mako">
-      <h1 className="text-3xl">Step 2:Select Your Pay Plan </h1>
-      <div className=" container p-5 bg-[#D3D2D2] flex flex-col gap-3">
+      <h1 className="text-3xl dark:text-white">Step 2:Select Your Pay Plan </h1>
+      <div className=" container p-5 bg-[#D3D2D2] flex flex-col gap-3 dark:bg-white">
         <p className="text-[#FFA500]">Choose plan ____</p>
         <p className=" font-mako text-2xl">Select pricing plan</p>
         <div className="flex flex-row gap-2">
-          <div className="flex flex-col items-center justify-center py-3  w-4/12   bg-[#BCBCBC] px-10 gap-2">
+          <div className="flex flex-col items-center justify-center py-3  w-4/12   bg-[#BCBCBC] dark:bg-[#F0F8FF] px-10 gap-2 ">
             <h4 className="text-[#030D2780]">Basic Book</h4>
             <p className={`${selectedValue === 3000 ? "text-[#FFA500]" : ""}`}>
               3000 FRW
@@ -55,7 +55,7 @@ const Step2Container = () => {
             </div>
           </div>
 
-          <div className="flex flex-col items-center justify-center py-3    w-4/12  bg-[#BCBCBC] px-10 gap-2">
+          <div className="flex flex-col items-center justify-center py-3    w-4/12  bg-[#BCBCBC] dark:bg-[#F0F8FF] px-10 gap-2">
             <h4 className="text-[#030D2780]">Basic Book</h4>
             <p className={`${selectedValue === 4000 ? "text-[#FFA500]" : ""}`}>
               4000 FRW
@@ -84,7 +84,7 @@ const Step2Container = () => {
               </button>
             </div>
           </div>
-          <div className="flex flex-col items-center justify-center py-3   w-4/12   bg-[#BCBCBC] px-10 gap-2">
+          <div className="flex flex-col items-center justify-center py-3   w-4/12   bg-[#BCBCBC] dark:bg-[#F0F8FF] px-10 gap-2">
             <h4 className="text-[#030D2780]">Basic Book</h4>
             <p className={`${selectedValue === 5000 ? "text-[#FFA500]" : ""}`}>
               5000 FRW
@@ -113,7 +113,7 @@ const Step2Container = () => {
               </button>
             </div>
           </div>
-          <div className="flex flex-col items-center justify-center py-3    w-4/12  bg-[#BCBCBC] px-10 gap-2">
+          <div className="flex flex-col items-center justify-center py-3    w-4/12  bg-[#BCBCBC] dark:bg-[#F0F8FF] px-10 gap-2">
             <h4 className="text-[#030D2780]">Basic Book</h4>
             <p className={`${selectedValue === 6000 ? "text-[#FFA500]" : ""}`}>
               {" "}

@@ -3,23 +3,23 @@ import Address from "../components/Address";
 
 const Services = () => {
   return (
-    <div>
-      <div className="flex flex-col justify-center items-center text-xl">
-        <p className="mb-2">Best Services</p>
+    <div className="dark:bg-[#030D27] dark:text-white">
+      <div className="flex flex-col justify-center items-center text-xl ">
+        <p className="mb-2 dark:text-[#808080]">Best Services</p>
         <h1 className="text-4xl">Why Choose Us?</h1>
-        <p>
+        <p className="dark:text-[#808080]">
           Today, money is more and more valuable over time. For that reason we
           are the best
         </p>
-        <p>
+        <p className="dark:text-[#808080]">
           opportunity that came to save the world. If you want ans wish to save
           for your future
         </p>
-        <p>
+        <p className="dark:text-[#808080]">
           we are here for you. Therefore choose us to for your future profit and
           also for your precious time.
         </p>
-        <p>Choose us also for:</p>
+        <p className="dark:text-[#808080]">Choose us also for:</p>
       </div>
       <div className="flex flex-row items-center s justify-evenly">
         <div className="ml-40 md:ml-10 w-6/10">
@@ -38,8 +38,12 @@ const Services = () => {
             </div>
             <div>
               <h3 className="text-2xl">Customer Support</h3>
-              <p>We are mostly patinate to our customers by</p>
-              <p>providing a good customer care</p>
+              <p className="dark:text-[#808080]">
+                We are mostly patinate to our customers by
+              </p>
+              <p className="dark:text-[#808080]">
+                providing a good customer care
+              </p>
             </div>
           </div>
           <div className="flex flex-row gap-5 items-center">
@@ -48,8 +52,10 @@ const Services = () => {
             </div>
             <div>
               <h3 className=" text-2xl">Best Price Guaranted</h3>
-              <p>Not like mostly today’s scam we provide a good and a</p>
-              <p>chievable price</p>
+              <p className="dark:text-[#808080]">
+                Not like mostly today’s scam we provide a good and a
+              </p>
+              <p className="dark:text-[#808080]">chievable price</p>
             </div>
           </div>
           <div className="flex flex-row gap-5 items-center">
@@ -62,8 +68,12 @@ const Services = () => {
             </div>
             <div>
               <h3 className="text-2xl">Many Locations</h3>
-              <p>We are build and structured in a way that we are found</p>
-              <p>in many locations of the country</p>
+              <p className="dark:text-[#808080]">
+                We are build and structured in a way that we are found
+              </p>
+              <p className="dark:text-[#808080]">
+                in many locations of the country
+              </p>
             </div>
           </div>
           <div className="flex flex-row gap-5 items-center">
@@ -77,8 +87,10 @@ const Services = () => {
             <div>
               <h3 className="text-2xl">Meet your requirements</h3>
 
-              <p>We are here to meet all your requirements and all you</p>
-              <p>can ask for.</p>
+              <p className="dark:text-[#808080]">
+                We are here to meet all your requirements and all you
+              </p>
+              <p className="dark:text-[#808080]">can ask for.</p>
             </div>
           </div>
         </div>
@@ -89,7 +101,7 @@ const Services = () => {
 
       {/* community */}
       <div className="flex lg:flex-row  justify-evenly m-8 gap-60 sm:flex-col sm:gap-20 md:justify-center md:items-center">
-        <div className="border border-1 rounded-3xl  w-72 p-5 text-lg">
+        <div className="border border-1 rounded-3xl  w-72 p-5 text-lg dark:text-[#808080]">
           <span className="text-[#FFA500] font-extrabold mr-2 flex">"</span>
           At my first time after using
           <p>this site as the product of</p>
@@ -108,10 +120,10 @@ const Services = () => {
               alt="user"
               className="user object-cover rounded-full w-12 h-12"
             />
-            <p className="text-xl">by peter</p>
+            <p className="text-xl dark:text-white">by peter</p>
           </div>
         </div>
-        <div className="border border-1 rounded-3xl   w-72 p-5 text-lg">
+        <div className="border border-1 rounded-3xl   w-72 p-5 text-lg dark:text-[#808080]">
           <span className="text-[#FFA500] font-extrabold mr-2 flex">"</span>
           <p>As among the very first </p>
           <p>users of the project i was</p>
@@ -132,10 +144,10 @@ const Services = () => {
               alt="user"
               className="user object-cover rounded-full w-12 h-12"
             />
-            <p className="text-xl">by b06</p>
+            <p className="text-xl dark:text-white">by b06</p>
           </div>
         </div>
-        <div className="border border-1 rounded-3xl   w-72 p-5 text-lg">
+        <div className="border border-1 rounded-3xl   w-72 p-5 text-lg dark:text-[#808080]">
           <span className="text-[#FFA500] font-extrabold mr-2 flex">"</span>
           <p>This project is profitable to</p>
           <p>the population work with us </p>
@@ -152,33 +164,46 @@ const Services = () => {
               alt="user"
               className="user object-cover rounded-full w-12 h-12"
             />
-            <p className="text-xl">by jodos</p>
+            <p className="text-xl dark:text-white">by jodos</p>
           </div>
         </div>
       </div>
       {/* pagination */}
       <div className="flex flex-row mt-10 gap-2 justify-center items-center">
         <div className="flex flex-row">
-          <img src="/assets/lin3.png" alt="lines"  className="h-2 w-3/12"/>
-          <img src="/assets/lin4.png" alt="lines" className="h-2 w-8/12"/>
+          <img src="/assets/lin3.png" alt="lines" className="h-2 w-3/12" />
+          <img src="/assets/lin4.png" alt="lines" className="h-2 w-8/12" />
         </div>
 
         <div className="flex  gap-4">
-          <p className="h-10 bg-[#030D27] text-white w-10 flex justify-center items-center text-4xl  border-4 border-[#FFA500] hover:cursor-pointer">&lt;</p>
-          <p className="h-10 bg-[#030D27] text-white w-10 flex justify-center items-center text-4xl  border-4 border-[#FFA500] hover:cursor-pointer">&gt;</p>
+          <p className="h-10 bg-[#030D27] text-white w-10 flex justify-center items-center text-4xl  border-4 border-[#FFA500] hover:cursor-pointer">
+            &lt;
+          </p>
+          <p className="h-10 bg-[#030D27] text-white w-10 flex justify-center items-center text-4xl  border-4 border-[#FFA500] hover:cursor-pointer">
+            &gt;
+          </p>
         </div>
       </div>
       <div className="flex justify-center items-center my-7">
-      <div className="serviceBackground flex flex-col items-center   text-1xl py-16 px-5">
-        <p>Enjoy the beauty of working with us today and meet</p>
-        <p>our vision and goal throught booking registering and </p>
-        <p>with us today</p>
-        <p className="text-[#D9D9D9] font-bold text-2xl">Reserve Today and Save Money with your time</p>
-        <Link className="bg-[#808080] flex justify-center items-center  rounded-lg w-6/12 text-white  my-5 py-5 " to="/home">Book Your Seat</Link>
+        <div className="serviceBackground flex flex-col items-center   gap-6  text-1xl py-16 px-5">
+          <div className="flex justify-center items-center flex-col">
+            <p>Enjoy the beauty of working with us today and meet</p>
+            <p>our vision and goal throught booking registering and </p>
+            <p>with us today</p>
+          </div>
+
+          <p className="text-[#D9D9D9] font-bold ">
+            Reserve Today and Save Money with your time
+          </p>
+          <Link
+            className="bg-[#808080]  dark:bg-[#D9D9D9] dark:text-black flex justify-center items-center  rounded-lg w-6/12 text-white  my-5 py-5 "
+            to="/home"
+          >
+            Book Your Seat
+          </Link>
+        </div>
       </div>
-      </div>
-      <Address/>
-   
+      <Address />
     </div>
   );
 };

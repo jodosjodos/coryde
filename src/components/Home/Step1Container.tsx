@@ -20,15 +20,15 @@ const Step1Container = () => {
 
   return (
     <div className="flex flex-col justify-center items-center gap-10  font-mako">
-      <h1 className="text-3xl">Step 1: Select Car Type</h1>
-      <div className="container p-5 bg-[#D3D2D2] flex flex-col gap-3">
-        <p className="text-[#FFA500">Choose Car______</p>
+      <h1 className="text-3xl dark:text-white">Step 1: Select Car Type</h1>
+      <div className="container p-5 bg-[#D3D2D2] flex flex-col gap-3 dark:bg-white">
+        <p className="text-[#FFA500]">Choose Car______</p>
         <p className="font-mako text-2xl">Select Vehicle Type</p>
         <div className="flex flex-row gap-2 hover:cursor-pointer">
           <div
-            className={`${
-              selected === "taxi" ? "bg-[#030D27]" : "bg-white"
-            } flex flex-col justify-center items-center px-10 w-4/12`}
+            className={` ${
+              selected === "taxi" ? "bg-[#030D27] border-none" : "bg-white"
+            } flex flex-col justify-center items-center px-10 w-4/12 dark:border-2 dark:border-gray-400`}
             onClick={() => handleBgColor("taxi")}
           >
             <div>
@@ -37,7 +37,7 @@ const Step1Container = () => {
                   selected === "taxi" ? "carWhite.png" : "microBus.png"
                 }`}
                 alt="taxi"
-                className="object-contain h-14 w-14"
+                className="object-contain h-14 w-14 "
               />
             </div>
             <p
@@ -50,8 +50,8 @@ const Step1Container = () => {
           </div>
           <div
             className={` hover:cursor-pointer ${
-              selected === "micro-bus" ? "bg-[#030D27]" : "bg-white"
-            } flex flex-col justify-center items-center px-10 w-4/12`}
+              selected === "micro-bus" ? "bg-[#030D27] border-none" : "bg-white"
+            } flex flex-col justify-center items-center px-10 w-4/12 dark:border-2 dark:border-gray-400`}
             onClick={() => handleBgColor("micro-bus")}
           >
             <div>
@@ -73,8 +73,8 @@ const Step1Container = () => {
           </div>
           <div
             className={` hover:cursor-pointer ${
-              selected === "mini-bus" ? "bg-[#030D27]" : "bg-white"
-            } flex flex-col justify-center items-center px-10 w-4/12`}
+              selected === "mini-bus" ? "bg-[#030D27] border-none" : "bg-white"
+            } flex flex-col justify-center items-center px-10 w-4/12 dark:border-2 dark:border-gray-400`}
             onClick={() => handleBgColor("mini-bus")}
           >
             <div>
@@ -96,8 +96,8 @@ const Step1Container = () => {
           </div>
           <div
             className={`hover:cursor-pointer  ${
-              selected === "van" ? "bg-[#030D27]" : "bg-white"
-            } flex flex-col justify-center items-center px-10 w-4/12`}
+              selected === "van" ? "bg-[#030D27] border-none" : "bg-white"
+            } flex flex-col justify-center items-center px-10 w-4/12 dark:border-2 dark:border-gray-400`}
             onClick={() => handleBgColor("van")}
           >
             <div>

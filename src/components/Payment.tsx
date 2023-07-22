@@ -35,7 +35,7 @@ const Payment = () => {
           
       }
   return (
-  <div className="flex flex-col gap-10">
+  <div className="flex flex-col gap-10 dark:bg-white">
     <h1 className="text-3xl">Card information</h1>
       <div className="mb-3">
         <p className="text-[#FFA500] text-xl">

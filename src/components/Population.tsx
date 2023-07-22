@@ -2,7 +2,7 @@ const Population = () => {
   return (
     <div className="flex flex-col items-center justify-center mt-5 py-5">
       <h1 className="text-4xl">Our Population</h1>
-    <div className="flex flex-row items-center justify-center sm:flex-col md:flex-row lg:flex-row  lg:gap-40 md:gap-8">
+    <div className="flex flex-row items-center justify-center sm:flex-col md:flex-row lg:flex-row  lg:gap-40 md:gap-8 dark:text-black">
       <div className="bg-[#D9D9D9] flex items-center justify-center flex-col p-5 gap-3 rounded-md">
         <p>Our total population of the</p>
         <p> total users today is tend</p>

@@ -20,6 +20,6 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src", "src/components/assets/index.js"],
+  "include": ["src", "src/components/assets/index.js", "src/hooks/handleModes.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

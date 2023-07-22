@@ -49,13 +49,13 @@ const Step5container = () => {
 
   return (
     <div className="flex flex-col justify-center items-center gap-10  font-mako mb-16 text-xl">
-      <h1 className="text-3xl">Step 5: Fill Car & Personal Details</h1>
-      <div className=" container p-5 bg-[#D3D2D2] flex flex-col gap-4">
+      <h1 className="text-3xl dark:text-white">Step 5: Fill Car & Personal Details</h1>
+      <div className=" container p-5 bg-[#D3D2D2] dark:bg-white flex flex-col gap-4">
         <p className="text-[#FFA500]">Enter Your Details __________</p>
         <p className=" font-mako text-2xl">Booking Details</p>
         <form onSubmit={handleSubmit(handleSubmission)}>
           <div className="grid  grid-cols-3  grid-rows-5 gap-x-16 px-5 gap-y-20 ">
-            <div className="bg-white flex flex-row gap-20 items-center justify-center w-full h-32 py-7 px-16 hover:cursor-pointer">
+            <div className="bg-white flex flex-row gap-20 items-center justify-center w-full h-32 py-7 px-16 hover:cursor-pointer dark:border-2  dark:border-[#ccc]">
               <div className="flex flex-col gap-1">
                 <p>Vehicle Type</p>
                 <p className="text-[#FFA500]">{data.carType}</p>
@@ -68,7 +68,7 @@ const Step5container = () => {
                 />
               </div>
             </div>
-            <div className="bg-white flex flex-row gap-20 items-center justify-center w-full h-32 py-7 px-16">
+            <div className="bg-white flex flex-row gap-20 items-center justify-center w-full h-32 py-7 px-16 dark:border-2  dark:border-[#ccc]">
               <div className="flex flex-col gap-1">
                 <p>Pricing Plan</p>
                 <p className="text-[#FFA500]">{data.pricePlan}</p>
@@ -81,7 +81,7 @@ const Step5container = () => {
                 />
               </div>
             </div>
-            <div className="bg-white flex flex-row gap-20 items-center justify-center w-full h-32 py-7 px-16">
+            <div className="bg-white flex flex-row gap-20 items-center justify-center w-full h-32 py-7 px-16 dark:border-2  dark:border-[#ccc]">
               <div className="flex flex-col gap-1">
                 <p>Extra Features</p>
                 <p className="text-[#FFA500]">No Extra Feature Selected</p>
@@ -94,7 +94,7 @@ const Step5container = () => {
                 />
               </div>
             </div>
-            <div className="bg-white flex flex-row gap-10 items-center justify-center w-full h-32 py-7 px-5">
+            <div className="bg-white flex flex-row gap-10 items-center justify-center w-full h-32 py-7 px-5 dark:border-2  dark:border-[#ccc]">
               <div className="flex flex-col gap-1">
                 <p>Booking Date</p>
                 <p className="text-[#FFA500]">{convertTime(data.date)}</p>
@@ -107,7 +107,7 @@ const Step5container = () => {
                 />
               </div>
             </div>
-            <div className="bg-white flex flex-row gap-10 items-center justify-center w-full h-32 py-7 px-5">
+            <div className="bg-white flex flex-row gap-10 items-center justify-center w-full h-32 py-7 px-5 dark:border-2  dark:border-[#ccc]">
               <div className="flex flex-col gap-1">
                 <p>Extra Details</p>
                 <p className="text-[#FFA500]">Goods, Sick Person</p>
@@ -120,7 +120,7 @@ const Step5container = () => {
                 />
               </div>
             </div>
-            <div className="bg-white flex flex-row gap-10 items-center justify-center w-full h-32 py-7 px-5">
+            <div className="bg-white flex flex-row gap-10 items-center justify-center w-full h-32 py-7 px-5 dark:border-2  dark:border-[#ccc]">
               <div className="flex flex-col gap-1">
                 <p>Total Amount</p>
                 <p className="text-[#FFA500]">$0.00</p>
@@ -134,12 +134,12 @@ const Step5container = () => {
               </div>
             </div>
 
-            <div className="w-full h-20   p-2">
+            <div className="w-full h-20   p-2 ">
               <input
                 type="text"
                 placeholder="First Name *"
                 {...register("firstName")}
-                className={`w-full h-full bg-[#BCBCBC] border-none focus:outline-none placeholder:text-xl px-7 font-semibold ${
+                className={` dark:bg-[#D0E4F6] w-full h-full bg-[#BCBCBC] border-none focus:outline-none placeholder:text-xl px-7 font-semibold ${
                   errors?.firstName ? " placeholder:text-[#FFA500]" : ""
                 }`}
               />
@@ -152,7 +152,7 @@ const Step5container = () => {
                 type="text"
                 placeholder="Email *"
                 {...register("email")}
-                className={` w-full h-full bg-[#BCBCBC] border-none focus:outline-none  placeholder:text-xl  px-7  font-semibold 
+                className={` w-full h-full bg-[#BCBCBC] dark:bg-[#D0E4F6] border-none focus:outline-none  placeholder:text-xl  px-7  font-semibold 
                 ${errors?.email ? " placeholder:text-[#FFA500]" : ""}`}
               />
               <p className="text-[#FFA500] font-bold">
@@ -166,7 +166,7 @@ const Step5container = () => {
                 {...register("phoneNumber")}
                 className={`${
                   errors?.phoneNumber ? " placeholder:text-[#FFA500]" : ""
-                } w-full h-full bg-[#BCBCBC] border-none focus:outline-none  placeholder:text-xl  px-7  font-semibold`}
+                } w-full h-full bg-[#BCBCBC] border-none focus:outline-none  placeholder:text-xl  px-7  font-semibold dark:bg-[#D0E4F6]`}
                 required
               />
               <p className="text-[#FFA500] font-bold">
@@ -180,7 +180,7 @@ const Step5container = () => {
                 {...register("NIC")}
                 className={`${
                   errors?.phoneNumber ? " placeholder:text-[#FFA500]" : ""
-                }  w-full h-full bg-[#BCBCBC] border-none focus:outline-none  placeholder:text-xl  px-7  font-semibold`}
+                }  w-full h-full bg-[#BCBCBC] dark:bg-[#D0E4F6] border-none focus:outline-none  placeholder:text-xl  px-7  font-semibold`}
               />
             </div>
             <div className="w-full h-20 ">
@@ -192,7 +192,7 @@ const Step5container = () => {
                   errors?.currectDestination
                     ? " placeholder:text-[#FFA500]"
                     : ""
-                }  w-full h-full bg-[#BCBCBC] border-none focus:outline-none  placeholder:text-xl  px-7  font-semibold`}
+                }  w-full h-full bg-[#BCBCBC] dark:bg-[#D0E4F6] border-none focus:outline-none  placeholder:text-xl  px-7  font-semibold`}
               />
               <p className="text-[#FFA500] font-bold">
                 {errors?.currectDestination?.message}
@@ -205,7 +205,7 @@ const Step5container = () => {
                 {...register("finalDestination")}
                 className={`${
                   errors?.finalDestination ? " placeholder:text-[#FFA500]" : ""
-                }  w-full h-full bg-[#BCBCBC] border-none focus:outline-none  placeholder:text-xl  px-7  font-semibold`}
+                }  w-full h-full bg-[#BCBCBC] dark:bg-[#D0E4F6] border-none focus:outline-none  placeholder:text-xl  px-7  font-semibold`}
                 required
               />
               <p className="text-[#FFA500] font-bold">
@@ -219,7 +219,7 @@ const Step5container = () => {
                 id="extraDetails"
                 className={`${
                   errors?.extraDetails ? " placeholder:text-[#FFA500]" : ""
-                }  w-full h-full p-2  bg-[#BCBCBC] focus:outline-none placeholder:p-2 text-semibold text-xl`}
+                }  w-full h-full p-2  bg-[#BCBCBC] dark:bg-[#D0E4F6] focus:outline-none placeholder:p-2 text-semibold text-xl`}
                 placeholder="extra Details "
               ></textarea>
               <p className="text-[#FFA500] font-bold">
