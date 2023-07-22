@@ -10,8 +10,10 @@ import { RootState } from "../../store";
 import { formActions } from "../../store/reducers/FormSubmissionSlice";
 
 const Step5container = () => {
-  const dispatch=useDispatch()
-  const iniTialValue=useSelector((state:RootState)=>state.formSubmission.submitted)
+  const dispatch = useDispatch();
+  const iniTialValue = useSelector(
+    (state: RootState) => state.formSubmission.submitted
+  );
   const schema = yup.object().shape({
     firstName: yup.string().required(),
     email: yup.string().email().required("email is required"),
@@ -21,8 +23,6 @@ const Step5container = () => {
     finalDestination: yup.string().required(),
     extraDetails: yup.string().notRequired(),
   });
-
-
 
   const {
     register,
@@ -39,16 +39,14 @@ const Step5container = () => {
     console.log(errors);
   }
   const handleSubmission = (datas: object) => {
- 
-
     console.log(datas);
-   dispatch(formActions.changeState())
+    dispatch(formActions.changeState());
     reset();
     clearErrors();
   };
 
-
   const data = useSelector(combinedSelector);
+
   return (
     <div className="flex flex-col justify-center items-center gap-10  font-mako mb-16 text-xl">
       <h1 className="text-3xl">Step 5: Fill Car & Personal Details</h1>
@@ -144,9 +142,10 @@ const Step5container = () => {
                 className={`w-full h-full bg-[#BCBCBC] border-none focus:outline-none placeholder:text-xl px-7 font-semibold ${
                   errors?.firstName ? " placeholder:text-[#FFA500]" : ""
                 }`}
-                
               />
-              <p className="text-[#FFA500] font-bold">{errors?.firstName?.message}</p>
+              <p className="text-[#FFA500] font-bold">
+                {errors?.firstName?.message}
+              </p>
             </div>
             <div className="w-full h-20 ">
               <input
@@ -154,29 +153,34 @@ const Step5container = () => {
                 placeholder="Email *"
                 {...register("email")}
                 className={` w-full h-full bg-[#BCBCBC] border-none focus:outline-none  placeholder:text-xl  px-7  font-semibold 
-                ${errors?.email? " placeholder:text-[#FFA500]" : ""
-              }`}
+                ${errors?.email ? " placeholder:text-[#FFA500]" : ""}`}
               />
-               <p className="text-[#FFA500] font-bold">{errors?.email?.message}</p>
+              <p className="text-[#FFA500] font-bold">
+                {errors?.email?.message}
+              </p>
             </div>
             <div className="w-full h-20">
               <input
                 type="text"
                 placeholder="Phone Number"
                 {...register("phoneNumber")}
-                className={`${errors?.phoneNumber? " placeholder:text-[#FFA500]" : ""
-              } w-full h-full bg-[#BCBCBC] border-none focus:outline-none  placeholder:text-xl  px-7  font-semibold`}
+                className={`${
+                  errors?.phoneNumber ? " placeholder:text-[#FFA500]" : ""
+                } w-full h-full bg-[#BCBCBC] border-none focus:outline-none  placeholder:text-xl  px-7  font-semibold`}
                 required
               />
-               <p className="text-[#FFA500] font-bold">{errors?.phoneNumber?.message}</p>
+              <p className="text-[#FFA500] font-bold">
+                {errors?.phoneNumber?.message}
+              </p>
             </div>
             <div className="w-full h-20 ">
               <input
                 type="text"
                 placeholder="National Identity Card Number *"
                 {...register("NIC")}
-                className={`${errors?.phoneNumber? " placeholder:text-[#FFA500]" : ""
-              }  w-full h-full bg-[#BCBCBC] border-none focus:outline-none  placeholder:text-xl  px-7  font-semibold`}
+                className={`${
+                  errors?.phoneNumber ? " placeholder:text-[#FFA500]" : ""
+                }  w-full h-full bg-[#BCBCBC] border-none focus:outline-none  placeholder:text-xl  px-7  font-semibold`}
               />
             </div>
             <div className="w-full h-20 ">
@@ -184,32 +188,43 @@ const Step5container = () => {
                 type="text"
                 placeholder="Current Destination"
                 {...register("currectDestination")}
-                className={` ${errors?.currectDestination? " placeholder:text-[#FFA500]" : ""
-              }  w-full h-full bg-[#BCBCBC] border-none focus:outline-none  placeholder:text-xl  px-7  font-semibold`}
+                className={` ${
+                  errors?.currectDestination
+                    ? " placeholder:text-[#FFA500]"
+                    : ""
+                }  w-full h-full bg-[#BCBCBC] border-none focus:outline-none  placeholder:text-xl  px-7  font-semibold`}
               />
-                 <p className="text-[#FFA500] font-bold">{errors?.currectDestination?.message}</p>
+              <p className="text-[#FFA500] font-bold">
+                {errors?.currectDestination?.message}
+              </p>
             </div>
             <div className="w-full h-20 ">
               <input
                 type="text"
                 placeholder="Final Destination"
                 {...register("finalDestination")}
-                className={`${errors?.finalDestination? " placeholder:text-[#FFA500]" : ""
-              }  w-full h-full bg-[#BCBCBC] border-none focus:outline-none  placeholder:text-xl  px-7  font-semibold`}
+                className={`${
+                  errors?.finalDestination ? " placeholder:text-[#FFA500]" : ""
+                }  w-full h-full bg-[#BCBCBC] border-none focus:outline-none  placeholder:text-xl  px-7  font-semibold`}
                 required
               />
-                 <p className="text-[#FFA500] font-bold">{errors?.finalDestination?.message}</p>
+              <p className="text-[#FFA500] font-bold">
+                {errors?.finalDestination?.message}
+              </p>
             </div>
             <div className=" col-start-1 col-span-3  h-20 ">
               {/* how to style that being entered */}
               <textarea
                 {...register("extraDetails")}
                 id="extraDetails"
-                className={`${errors?.extraDetails? " placeholder:text-[#FFA500]" : ""
-              }  w-full h-full p-2  bg-[#BCBCBC] focus:outline-none placeholder:p-2 text-semibold text-xl`}
+                className={`${
+                  errors?.extraDetails ? " placeholder:text-[#FFA500]" : ""
+                }  w-full h-full p-2  bg-[#BCBCBC] focus:outline-none placeholder:p-2 text-semibold text-xl`}
                 placeholder="extra Details "
               ></textarea>
-                <p className="text-[#FFA500] font-bold">{errors?.extraDetails?.message}</p>
+              <p className="text-[#FFA500] font-bold">
+                {errors?.extraDetails?.message}
+              </p>
             </div>
             <input
               className="text-white bg-[#EC9D0C]   rounded-md  w-8/12  h-16 hover:cursor-pointer"

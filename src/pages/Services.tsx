@@ -174,7 +174,7 @@ const Services = () => {
         <p>our vision and goal throught booking registering and </p>
         <p>with us today</p>
         <p className="text-[#D9D9D9] font-bold text-2xl">Reserve Today and Save Money with your time</p>
-        <Link className="bg-[#808080] flex justify-center items-center  rounded-lg w-6/12 text-white  my-5 py-5 " to="#">Book Your Seat</Link>
+        <Link className="bg-[#808080] flex justify-center items-center  rounded-lg w-6/12 text-white  my-5 py-5 " to="/home">Book Your Seat</Link>
       </div>
       </div>
       <Address/>
